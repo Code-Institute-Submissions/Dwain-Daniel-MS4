@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1,
+        "model": "workouts.category",
+        "fields": {
+            "name": "bulk",
+            "friendly_name": "Bulk"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "workouts.category",
+        "fields": {
+            "name": "tone",
+            "friendly_name": "Tone"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "workouts.category",
+        "fields": {
+            "name": "stretching_mobility",
+            "friendly_name": "Stretching & Mobility"
+        }
+    }
+]
