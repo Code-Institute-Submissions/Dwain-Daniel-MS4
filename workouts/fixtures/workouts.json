@@ -1,7 +1,7 @@
 [
     {
         "pk": 1,
-        "model": "workouts.product",
+        "model": "workouts.workouts",
         "fields": {
             "sku": "pp5001340155",
             "name": "Bulk Up",
@@ -15,7 +15,7 @@
     },
     {
         "pk": 2,
-        "model": "products.product",
+        "model": "workouts.workouts",
         "fields": {
             "sku": "pp5001600425",
             "name": "Weight Loss",
@@ -29,7 +29,7 @@
     },
     {
         "pk": 3,
-        "model": "products.product",
+        "model": "workouts.workouts",
         "fields": {
             "sku": "pp5001730010",
             "name": "Stretching & Mobility",
