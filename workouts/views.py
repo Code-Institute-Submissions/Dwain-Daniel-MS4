@@ -15,14 +15,13 @@ def all_workouts(request):
     return render(request, 'workouts/workouts.html', context)
 
 
-def workout_detail(request, workout_id):
-    """ A view to show all products, including sorting and search queries """
-
-    workouts = get_object_or_404(Workouts, pk=workout_id)
+def workouts_detail(request, workouts_id):
+ 
+    workouts = get_object_or_404(Workouts, pk=workouts_id)
 
     context = {
         'workouts': workouts,
     }
 
-    return render(request, 'workouts/workouts.html', context)
+    return render(request, 'workouts/workouts_detail.html', context)
 
