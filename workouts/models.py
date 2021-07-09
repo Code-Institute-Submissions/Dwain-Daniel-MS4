@@ -19,7 +19,7 @@ class Category(models.Model):
 class Workouts(models.Model):
 
     class Meta:
-        verbose_name_plural = 'Workouts'
+        verbose_name_plural = 'Workouts'    
         
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)

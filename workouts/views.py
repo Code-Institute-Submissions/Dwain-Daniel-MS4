@@ -1,15 +1,15 @@
 from django.shortcuts import render
-from .models import Product
+from .models import Workouts
 
 # Create your views here.
 
-def all_products(request):
+def all_workouts(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
+    workouts = Workouts.objects.all()
 
     context = {
-        'products': products,
+        'workouts': workouts,
     }
 
-    return render(request, 'products/products.html', context)
+    return render(request, 'workouts/workouts.html', context)

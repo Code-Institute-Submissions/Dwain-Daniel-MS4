@@ -3,12 +3,6 @@ from .models import Workouts, Category
 
 # Register your models here.
 
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = (
-        'friendly_name',
-        'name',
-    )
-
 class WorkoutsAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -20,6 +14,15 @@ class WorkoutsAdmin(admin.ModelAdmin):
     )
 
     ordering = ('sku',)
+    
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
+
 
 admin.site.register(Workouts, WorkoutsAdmin)
 admin.site.register(Category, CategoryAdmin)
