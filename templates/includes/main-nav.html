@@ -6,10 +6,10 @@
                 All Workout Plans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-plans-link">
-                <a href="" class="dropdown-item">Bulk Up</a>
-                <a href="" class="dropdown-item">Weight Loss</a>
-                <a href="" class="dropdown-item">Stretching & Mobility</a>
-                <a href="{% url 'workouts' %}" class="dropdown-item">All Plans</a>
+                <a href="{% url 'workouts' %}?category=bulk" class="dropdown-item">Bulk Up</a>
+                <a href="{% url 'workouts' %}?category=weight,loss" class="dropdown-item">Weight Loss</a>
+                <a href="{% url 'workouts' %}?category=stretching,mobility" class="dropdown-item">Stretching & Mobility</a>
+                <a href="{% url 'workouts' %}?category=bulk,weight,loss,stretching,mobility" class="dropdown-item">All Plans</a>
             </div>
         </li>
     </ul>

@@ -11,8 +11,8 @@
         "pk": 2,
         "model": "workouts.category",
         "fields": {
-            "name": "tone",
-            "friendly_name": "Tone"
+            "name": "weight_loss",
+            "friendly_name": "Weight Loss"
         }
     },
     {
