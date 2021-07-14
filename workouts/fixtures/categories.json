@@ -22,5 +22,13 @@
             "name": "stretching_mobility",
             "friendly_name": "Stretching & Mobility"
         }
+    },
+    {
+        "pk": 4,
+        "model": "workouts.category",
+        "fields": {
+            "name": "circuit_training",
+            "friendly_name": "Circuit Training"
+        }
     }
 ]

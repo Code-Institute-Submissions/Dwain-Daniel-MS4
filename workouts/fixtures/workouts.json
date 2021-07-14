@@ -40,5 +40,19 @@
             "image_url": "https://images.pexels.com/photos/3076509/pexels-photo-3076509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
             "image": "stretch.jpg"
         }
+    },
+    {
+        "pk": 4,
+        "model": "workouts.workouts",
+        "fields": {
+            "sku": "pp5001730065",
+            "name": "Circuit Training",
+            "description": "Every workout targets all major muscles, helping you build strength over time. All exercises are performed over two rounds, so get ready to sweat and burn. And don't worry—these full-body circuits are absolutely doable. You got this!",
+            "price": 24.99,
+            "category": 4,
+            "rating": 4.7,
+            "image_url": "https://images.pexels.com/photos/864939/pexels-photo-864939.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-864939.jpg&fm=jpg",
+            "image": "circuit.jpg"
+        }
     }
 ]
