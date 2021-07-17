@@ -20,6 +20,7 @@ def add_to_bag(request, workouts_id):
     request.session['bag'] = bag
     return redirect(redirect_url)
 
+
 def edit_bag(request, workouts_id):
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
@@ -32,3 +33,19 @@ def edit_bag(request, workouts_id):
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
+ 
+def remove_from_bag(request, workouts_id):
+    """remove the specified product from the bag"""
+    try:
+        bag = request.session.get('bag', {})
+
+        bag.pop(workouts_id)
+
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    
+
+    except Exception as e:
+        return HttpResponse(status=500)
