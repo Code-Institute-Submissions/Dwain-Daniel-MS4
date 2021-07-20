@@ -36,7 +36,7 @@ def edit_bag(request, workouts_id):
 
     else:
             bag.pop(workouts_id)
-            messages.success(request,f'Removed {workouts.name} from your bag')
+            messages.success(request,f'Removed {workouts.name} workout from your bag')
 
 
     request.session['bag'] = bag
@@ -51,7 +51,7 @@ def remove_from_bag(request, workouts_id):
         bag = request.session.get('bag', {})
 
         bag.pop(workouts_id)
-        messages.success(request,f'Removed {workouts.name} from your bag')
+        messages.success(request,f'Removed {workouts.name} workout from your bag')
 
 
 
