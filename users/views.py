@@ -3,6 +3,9 @@ from django.contrib import messages
 from .models import UserProfile
 from .forms import UserProfileForm
 
+from checkout.models import Order
+
+
 def users(request):
     """ Display the user's profile. """
     users = get_object_or_404(UserProfile, user=request.user)
