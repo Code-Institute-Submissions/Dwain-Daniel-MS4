@@ -143,7 +143,7 @@ def checkout_success(request, order_number):
     if request.user.is_authenticated:
         users = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
-        order.user_users = users
+        order.user_profile = users
         order.save()
 
         # Save the user's info
@@ -157,9 +157,9 @@ def checkout_success(request, order_number):
                 'default_postcode': order.postcode,
                 'default_country': order.country,
             }
-            user_users_form = UserProfileForm(users_data, instance=users)
-            if user_users_form.is_valid():
-                user_users_form.save()
+            user_profile_form = UserProfileForm(users_data, instance=users)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \

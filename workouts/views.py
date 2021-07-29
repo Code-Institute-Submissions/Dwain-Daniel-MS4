@@ -67,3 +67,27 @@ def add_workouts(request):
     }
 
     return render(request, template, context)
+
+
+def edit_workouts(request, workouts_id):
+    """ Edit a product in the store """
+    workouts = get_object_or_404(Workouts, pk=workouts_id)
+    if request.method == 'POST':
+        form = WorkoutsForm(request.POST, request.FILES, instance=workouts)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated workout!')
+            return redirect(reverse('workouts_detail', args=[workouts.id]))
+        else:
+            messages.error(request, 'Failed to update workouts. Please ensure the form is valid.')
+    else:
+        form = WorkoutsForm(instance=workouts)
+        messages.info(request, f'You are editing {workouts.name}')
+
+    template = 'workouts/edit_workouts.html'
+    context = {
+        'form': form,
+        'workouts': workouts,
+    }
+
+    return render(request, template, context)
