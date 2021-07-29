@@ -2,10 +2,10 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from .models import UserProfile
 from .forms import UserProfileForm
-
+from django.contrib.auth.decorators import login_required
 from checkout.models import Order
 
-
+@login_required
 def users(request):
     """ Display the user's profile. """
     users = get_object_or_404(UserProfile, user=request.user)

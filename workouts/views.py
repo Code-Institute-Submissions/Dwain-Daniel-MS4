@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Workouts, Category
 from .forms import WorkoutsForm
+from django.contrib.auth.decorators import login_required
+from .forms import WorkoutsForm
 
 # Create your views here.
 
@@ -47,9 +49,13 @@ def workouts_detail(request, workouts_id):
 
     return render(request, 'workouts/workouts_detail.html', context)
 
-
+@login_required
 def add_workouts(request):
     """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = WorkoutsForm(request.POST, request.FILES)
         if form.is_valid():
@@ -68,9 +74,13 @@ def add_workouts(request):
 
     return render(request, template, context)
 
-
+@login_required
 def edit_workouts(request, workouts_id):
     """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     workouts = get_object_or_404(Workouts, pk=workouts_id)
     if request.method == 'POST':
         form = WorkoutsForm(request.POST, request.FILES, instance=workouts)
@@ -92,9 +102,12 @@ def edit_workouts(request, workouts_id):
 
     return render(request, template, context)
 
-
+@login_required
 def delete_workouts(request, workouts_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
     workouts = get_object_or_404(Workouts, pk=workouts_id)
     workouts.delete()
     messages.success(request, 'Workout deleted!')
