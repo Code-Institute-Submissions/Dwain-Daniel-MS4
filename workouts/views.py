@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Workouts, Category
+from .forms import WorkoutsForm
 
 # Create your views here.
 
@@ -46,3 +47,13 @@ def workouts_detail(request, workouts_id):
 
     return render(request, 'workouts/workouts_detail.html', context)
 
+
+def add_workouts(request):
+    """ Add a product to the store """
+    form = WorkoutsForm()
+    template = 'workouts/add_workouts.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

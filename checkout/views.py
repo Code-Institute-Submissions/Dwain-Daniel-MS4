@@ -14,6 +14,7 @@ from bag.contexts import bag_contents
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -55,6 +56,9 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+            current_bag = bag_contents(request)
+            order.order_total = current_bag['grand_total']
+            order.grand_total = current_bag['grand_total']
             order.save()
             for item_id, item_data in bag.items():
                 try:
@@ -65,6 +69,9 @@ def checkout(request):
                             workouts=workouts,
                             quantity=item_data,
                         )
+                        #running = workouts.price*order_line_item.quantity
+                        #grand_total += running
+
                         order_line_item.save()
                 except Workouts.DoesNotExist:
                     messages.error(request, (
@@ -79,7 +86,6 @@ def checkout(request):
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
-
                     
     bag = request.session.get('bag', {})
     if not bag:
@@ -112,8 +118,7 @@ def checkout(request):
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
     else:
-            order_form = OrderForm()
-
+        order_form = OrderForm()
 
     order_form = OrderForm()
 
