@@ -75,7 +75,7 @@ def edit_workouts(request, workouts_id):
     if request.method == 'POST':
         form = WorkoutsForm(request.POST, request.FILES, instance=workouts)
         if form.is_valid():
-            form.save()
+            workouts = form.save()
             messages.success(request, 'Successfully updated workout!')
             return redirect(reverse('workouts_detail', args=[workouts.id]))
         else:
@@ -91,3 +91,11 @@ def edit_workouts(request, workouts_id):
     }
 
     return render(request, template, context)
+
+
+def delete_workouts(request, workouts_id):
+    """ Delete a product from the store """
+    workouts = get_object_or_404(Workouts, pk=workouts_id)
+    workouts.delete()
+    messages.success(request, 'Workout deleted!')
+    return redirect(reverse('workouts'))
