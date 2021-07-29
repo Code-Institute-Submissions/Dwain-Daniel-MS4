@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Workouts, Category
@@ -50,7 +50,17 @@ def workouts_detail(request, workouts_id):
 
 def add_workouts(request):
     """ Add a product to the store """
-    form = WorkoutsForm()
+    if request.method == 'POST':
+        form = WorkoutsForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added a new workout!')
+            return redirect(reverse('add_workouts'))
+        else:
+            messages.error(request, 'Failed to add new workout. Please ensure the form is valid.')
+    else:
+        form = WorkoutsForm()
+        
     template = 'workouts/add_workouts.html'
     context = {
         'form': form,

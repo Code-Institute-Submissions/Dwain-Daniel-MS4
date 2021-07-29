@@ -69,8 +69,6 @@ def checkout(request):
                             workouts=workouts,
                             quantity=item_data,
                         )
-                        #running = workouts.price*order_line_item.quantity
-                        #grand_total += running
 
                         order_line_item.save()
                 except Workouts.DoesNotExist:
@@ -85,8 +83,7 @@ def checkout(request):
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
-                    
+                Please double check your information.')     
     bag = request.session.get('bag', {})
     if not bag:
         messages.error(request, "There's nothing in your bag, have a look at our workouts and try again")
@@ -134,6 +131,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 def checkout_success(request, order_number):
     """
