@@ -29,7 +29,7 @@
         {% if user.is_authenticated %}
         <form method="POST" class="post-form" action="{{ request.get_full_path }}">{% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="save btn btn-default">Submit</button>
+            <button class="btn btn-black rounded-0" type="submit">Submit</button>
         </form>
         {% endif %}
     </div>
