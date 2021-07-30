@@ -13,5 +13,24 @@
     <div class="overlay"></div>
     <h1>{{ post.title }}</h1>
     <p>{{ post.body_text }}</p>
-    {{ comments }}
+    <div class="comments">
+        <p>Comments:</p>
+        {% for comment in comments %}
+            <div class="timeline-comment-wrapper">
+                <div class="timeline-comment">
+                    <div class="timeline-comment-header">
+                        <h3 class="timeline-comment-header-text"><strong>{{ comment.user }}</strong><span
+                                class="text-small"> commented on {{ comment.created_at }}</span></h3>
+                    </div>
+                    <p class="pl-3">{{ comment.comment }}</p>
+                </div>
+            </div>
+        {% endfor %}
+        {% if user.is_authenticated %}
+        <form method="POST" class="post-form" action="{{ request.get_full_path }}">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Submit</button>
+        </form>
+        {% endif %}
+    </div>
 {% endblock %}
