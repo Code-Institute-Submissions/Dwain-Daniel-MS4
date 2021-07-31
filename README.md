@@ -29,6 +29,7 @@ Returning users
 <li>I want the user to be able to comment on the blog and save these</li>
 <li>I want the user to be able to search for the category of workout they want</li>
 <li>I want the user to be able to view the workouts available</li>
+<li>I want the user to be able to view their previous orders</li>
    
 <h3> Design </h3>
 
@@ -100,11 +101,14 @@ I have used Jinja for my Python template
 [<h4>GitHub</h4>](https://github.com/)
 I have used Github as the hosting site for my code.
 
-[<h4>Werkzeug</h4>](https://pypi.org/project/Werkzeug/)
-I used Werkzeugfor password hashing and authentication
+[<h4>SQLite</h4>](https://www.sqlite.org/index.html)
+She project uses SQLite as the relational database to hold the backend information for the varions models used, when running locally.
 
-[<h4>Flask</h4>](https://pypi.org/project/Flask/)
-I have used Flask for the web application framework
+[<h4>Stripe API</h4>](https://stripe.com/gb)
+The project uses Stripe to make secure payments for logging and upvoting Feature Requests. The project uses Stripe's test payment functionality.
+
+[<h4>Django</h4>](https://www.djangoproject.com/)
+The project uses Django as the Python web framework.
 
 [<h4>Heroku</h4>](https://www.heroku.com/)
 I have used Heroku to deploy my app 
