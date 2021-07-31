@@ -1,102 +1,164 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1>Milestone Project</h1>
 
-Welcome Dwain-Daniel,
+<img src="static/testing/techsini.PNG">
+My site can be viewed at https://python-milestone.herokuapp.com/ 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
 
-## Gitpod Reminders
+This project will be used to display all that I have learned so far. I will be using this project to build a website for those trying to get fit and purchase a series of workouts. User of the site will be able view, buy and comment on all of these workouts. Admin will be able to add, delete and edit the workouts being displayed.
+will be able to view these as well as add, edit and delete their own recipes, should they choose to sign up. I want the website to be easily accessible, simple to navigate and user friendly. 
+It must also be displayed for various devices (desktop ,Tablet, Mobile Phone) whilst maintaining a great user experience . Links within the website directing me to other pages either within this website 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+<h3>UX</h3>
 
-A blue button should appear to click: _Make Public_,
+<h4>User Stories</h4>
 
-Another blue button should appear to click: _Open Browser_.
+New users
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+<li>I want the user to easily understand the main purpose of the site and view recipes</li>
+<li>I want the user to be able to easily navigate throughout the site to find content.</li>
+<li>I want the user to be intrigued enough to register an account</li>
+<li>I want the user to be able to view the workouts available</li>
+<li>I want the user to be able to search for the category of workout they want</li>
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+Returning users
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+<li>I want the user to be able to log in easily</li>
+<li>I want the user to be able to view their own profile</li>
+<li>I want the user to be able to comment on the blog and save these</li>
+<li>I want the user to be able to search for the category of workout they want</li>
+<li>I want the user to be able to view the workouts available</li>
+   
+<h3> Design </h3>
 
-To log into the Heroku toolbelt CLI:
+<h4>Colour Scheme</h4>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+I have used an bloack and white theme. I have used this as it is quite bold and portrays strength and hard work. The theme is consistent throughout the site which is good for the UI/UX. The header and footers 
+are both black with white text and icons.The background is white, with black text. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+<h4>Icons </h4>
 
-------
+I have incorporated icons from Font Awesome, thes have a functional purpose of highlighting certain input fields for the user.
 
-## Release History
+<h4>Defensive Design</h4>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<li>To submit and edit a workout, the user must be a authenticated super user</li>
+<li>To submit a comment on a blog, the user must be a authenticated user</li>
+<li>A recipe or category can't be deleted by just one click.</li>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+<h4>Wireframe</h4>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+The final version whilst similar doesnt match exactly. My wireframes can be found in my wireframes folder.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<h4>Features</h4>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<li>The links on the site all take you to the pages described.</li>
+<li>Site is responsive to different device sizes.</li>
+<li>Power Gym logo is found in the top left of all pages, this will take the user to the home page.</li>
+<li>The links are located to the right of the page, with an additional header containing links to the workout catergories, these will colapse into a navigation tab one smaller devices.</li>
+<li>The navigation links and buttons show a slight shadowing to let the user know that they are above a clickable button.</li>
+<li>Flash messages appear to let the user know what they have done for example a successful purchase or moving a workout to the bag.</li>
+<li>Once the user is signed in they have full functionality of the site. Non registered users can only see the Log In, the workouts and the bag.</li>
+<li>The submit and edit recipe workouts have fully functioning forms with defensive programming</li>
+ 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<h3>Features left to implement</h3>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+I would like to add a number of features going forward such as: <br>
+<li>A better stylized blog and comments page</li>
+<li>Send automatic confirmation emails</li>
+<li>Allow users to submit requests</li>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<h3>Languages Used</h3>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<li>CSS</li> 
+<li>HTML</li>
+<li>jQuery</li>
+<li>Python</li>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<h3>Technologies Used </h3>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+I have built my site using: 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+[<h4>CSS</h4>](https://en.wikipedia.org/wiki/CSS) 
+I have used CSS to style my website
 
-------
+[<h4>HTML</h4>](https://en.wikipedia.org/wiki/HTML) 
+I have used HTML as the main language to create my website.
 
-## FAQ about the uptime script
+[<h4>Materialize</h4>](https://materializecss.com/)
+I have used this for the responsive layout as well as custom components such as header, images, icons,footer, cards, and collapse element.
 
-**Why have you added this script?**
+[<h4>Balsamiq</h4>](https://balsamiq.com/#)
+I used Balsamiq to help create my template and design a quality site 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+[<h4>Jinja</h4>](https://jinja.palletsprojects.com/en/3.0.x/)
+I have used Jinja for my Python template
 
-**How will this affect me?**
+[<h4>GitHub</h4>](https://github.com/)
+I have used Github as the hosting site for my code.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+[<h4>Werkzeug</h4>](https://pypi.org/project/Werkzeug/)
+I used Werkzeugfor password hashing and authentication
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+[<h4>Flask</h4>](https://pypi.org/project/Flask/)
+I have used Flask for the web application framework
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+[<h4>Heroku</h4>](https://www.heroku.com/)
+I have used Heroku to deploy my app 
 
-**So….?**
+[<h4>MongoDB</h4>](https://www.mongodb.com/)
+I have used MongoDB as the database service for my project
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<h4>Git</h4>
+Git is used as version control software to commit and push code to the GitHub repository where the source code is stored.
 
-**Can I opt out?**
+[<h4>Techsini</h4>](http://techsini.com/multi-mockup/index.php)
+I have used this to create a mock up of the site on different devices
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+<h3>Testing</h3> 
 
-**Anything more?**
+I have tested my site thoroughly, all the links are working and take the user to the correct pages. 
+The webpage will respond when used on smaller devices, the nav bar will shrink down into a drop down menu. 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+<li>I placed my site throught a CSS Validator which returned no errors</li>
+<li>I have placed all pages through a HTML Validator which returned one warning</li>
+<img src="static/testing/html.PNG">
+<li>I have tested my webpage using [Google Mobile Testing](https://search.google.com/test/mobile-friendly) This returned no errors</li>
+<img src="static/testing/mobile-testing.PNG">
+<li>I have tested the Javascript on my webpage, this returned two warnings, no errors.</li>
+<img src="static/testing/jsHint.PNG">
+<li>I have placed all pages through a Python Validator. It returned a Pass mark.
+<li>I have also tested my page using Chrome Dev Lighthouse
+<img src="static/testing/lighthouse.PNG">
 
----
 
-Happy coding!
+<h3>Test User Stories</h3>
+
+<h4>New Users</h4>
+
+I want to easily understand the main purpose of the site and begin a fitness journey by picking a workout best suited for me.
+Upon entering the site, users will see the website name in the top left corner, Power Gym, followed by a variety of links in the top right.
+Below that there is a text section detailing what the site is about and its aims. This should have enough information to get me to register an account.
+I want to be able to easily navigate throughout the site to find content.
+The header will contain links to the other pages, this will be a responsive menu that will collapse on a mobile device. 
+
+
+<h4>Returning Users</h4>
+ 
+I can find the log in section quite easily both with the log in button in the nav bar but also the link on the register page.
+Submitting a order is very easy with all text fields clearly labelled and formatted to only allow the relevant text.
+The search function works very well, if I want a workout containing the word 'bulk' for example all bulking workouts will appear 
+All other workouts will be listed on the workouts page.
+
+<h3>Credits</h3>
+The Boutique Ado project was my initial inspiration for my project, I then tailored this to a gym website after viewing gym website templates on https://colorlib.com/
+All of the images used were taken from https://www.pexels.com/
+
+<h3>Acknowledgements</h3> 
+
+I need to thank my mentor Spencer Barriball for helping me and providing the guidance I needed. I would not have made it this far on the course without his advice and support. Absolutely brilliant tutor/mentor. 
+Tutor support was also a great help on occasion as well as Slack.
