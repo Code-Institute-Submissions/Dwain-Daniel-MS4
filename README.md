@@ -1,11 +1,9 @@
 <h1>Milestone Project</h1>
 
-<img src="static/testing/techsini.PNG">
-My site can be viewed at https://python-milestone.herokuapp.com/ 
+My site can be viewed at https://dwain-power-gym.herokuapp.com/ 
 
 
-This project will be used to display all that I have learned so far. I will be using this project to build a website for those trying to get fit and purchase a series of workouts. User of the site will be able view, buy and comment on all of these workouts. Admin will be able to add, delete and edit the workouts being displayed.
-will be able to view these as well as add, edit and delete their own recipes, should they choose to sign up. I want the website to be easily accessible, simple to navigate and user friendly. 
+This project will be used to display all that I have learned so far. I will be using this project to build a website for those trying to get fit and purchase a series of workouts. User of the site will be able view, buy and comment on all of these workouts. Admin will be able to add, delete and edit the workouts being displayed. I want the website to be easily accessible, simple to navigate and user friendly. 
 It must also be displayed for various devices (desktop ,Tablet, Mobile Phone) whilst maintaining a great user experience . Links within the website directing me to other pages either within this website 
 
 
